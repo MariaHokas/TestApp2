@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -20,6 +21,7 @@ namespace TestApp2.Controllers
             ReportChartDataViewModel model = new ReportChartDataViewModel();
 
             TimesheetEntities entities = new TimesheetEntities();
+
             try
             {
                 model.Labels = (from wa in entities.WorkAssignments
@@ -53,5 +55,6 @@ namespace TestApp2.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
 
         }
+
     }
 }

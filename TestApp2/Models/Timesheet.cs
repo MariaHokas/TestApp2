@@ -28,6 +28,7 @@ namespace TestApp2.Models
         public Nullable<System.DateTime> LastModifiedAt { get; set; }
         public Nullable<System.DateTime> DeletedAt { get; set; }
         public Nullable<bool> Active { get; set; }
+        public Nullable<int> Testi { get; set; }
     
         public virtual Contractor Contractor { get; set; }
         public virtual Customer Customer { get; set; }
